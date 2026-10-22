@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "auto-archive": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--frozen",
+        "codex-auto-archive",
+        "serve"
+      ],
+      "cwd": ".",
+      "startup_timeout_sec": 60,
+      "env_vars": [
+        "CODEX_HOME",
+        "CODEX_AUTO_ARCHIVE_HOME",
+        "CODEX_THREAD_ID"
+      ],
+      "type": "stdio"
+    }
+  }
+}

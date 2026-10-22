@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "codex-auto-archive"
+version = "0.1.0"
+description = "Safety-first native Codex Archive automation via MCP, hooks and local scheduling"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Jineggegg"}]
+keywords = ["codex", "mcp", "archive", "automation", "hooks"]
+classifiers = ["Programming Language :: Python :: 3", "Operating System :: Microsoft :: Windows", "Operating System :: POSIX :: Linux"]
+dependencies = ["mcp>=1.20,<2", "pydantic>=2.10,<3", "platformdirs>=4,<5", "portalocker>=3,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-asyncio>=0.24,<2", "ruff>=0.12"]
+
+[project.scripts]
+codex-auto-archive = "codex_auto_archive.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/Jineggegg/codex-auto-archive"
+Issues = "https://github.com/Jineggegg/codex-auto-archive/issues"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+markers = ["integration: invokes the real Codex app-server"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/codex_auto_archive"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B"]

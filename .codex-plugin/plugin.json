@@ -1,0 +1,32 @@
+{
+  "name": "codex-auto-archive",
+  "version": "0.1.0",
+  "description": "Native Codex Archive automation with independent idle and workflow rules, previews, restore, and safety protections. 本地自动归档与恢复，首次安装仅预览。",
+  "author": {
+    "name": "Jineggegg",
+    "url": "https://github.com/Jineggegg"
+  },
+  "homepage": "https://github.com/Jineggegg/codex-auto-archive",
+  "repository": "https://github.com/Jineggegg/codex-auto-archive",
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "archive",
+    "mcp",
+    "automation",
+    "productivity",
+    "hooks",
+    "windows",
+    "wsl"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "Codex Auto Archive",
+    "shortDescription": "Safe native Archive rules · 安全自动归档",
+    "longDescription": "Manage native Codex Archive in your language. Local scheduler, independent idle/PR/CI/completion rules, whitelist, previews and restore. Starts in Dry Run; fails closed when runtime or pin state cannot be proven.",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg"
+  }
+}
